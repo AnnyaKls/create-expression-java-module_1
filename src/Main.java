@@ -17,12 +17,12 @@ public class Main {
         return strArray.split(" ");
     }
     public static String get(int[] array) {
-        List<String> operators = List.of("+", "-", "/", "*");
+        List<String> operators = List.of("+", "-", "/", "*", "");
         String result = "";
-        for (int v = 0; v < Math.pow(4, array.length - 1); v++) {
+        for (int v = 0; v < Math.pow(5, array.length - 1); v++) {
             int j = v;
             for (int i = 0; i < array.length - 1; i++) {
-                result += array[i] + operators.get(j % 4);
+                result += array[i] + operators.get(j % 5);
                 j /= 4;
             }
             result += array[array.length - 1] + " ";
